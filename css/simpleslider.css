@@ -1,0 +1,96 @@
+
+.sld-container {
+   position: relative;
+   margin: auto;
+   display: flex;
+   align-items: center;
+   overflow: hidden;
+   padding: 1px;
+   gap: 0px;
+}
+
+.sld-prev-button {
+   background: rgba(80, 80, 80, 0.5);
+   font-family: arial;
+   font-size: 20px;
+   font-weight: bold;
+   position: absolute;
+   width: 25px;
+   left: 0px;
+   zindex: 2;
+   cursor: pointer;
+   color: white;
+   text-align : center;
+   vertical-align: middle;
+   transition-duration: 1s;
+   transition-property: visibility;
+   padding: 4px;
+}
+
+.sld-next-button {
+   background: rgba(80, 80, 80, 0.5);
+   font-family: arial;
+   font-size: 20px;
+   font-weight: bold;
+   position: absolute;
+   width: 25px;
+   right: 0px;
+   zindex: 2;
+   cursor: pointer;
+   color: white;
+   text-align : center;
+   vertical-align: middle;
+   transition-duration: 1s;
+   transition-property: visibility;
+   padding: 4px;
+}
+
+
+.sld-items-list {
+   display: flex;
+   position: relative;
+   left: 0px;
+   height: 100%; 
+   padding: 0px;
+   transition-duration: .5s;
+   transition-property: left;
+}
+
+.sld-item {
+   width: 250px;
+   height: auto;
+   position: relative;
+   overflow: hidden;
+}
+
+.sld-cluster {
+   width: 100%;
+}
+
+.sld-item-description {
+   color: white;
+   font-size: x-small;
+   position: absolute;
+   bottom: 0px;
+   left: 0px;
+   font-family: verdana;
+   font-weight: bold;
+   zindex: 2;
+}
+
+.sld-descr-link:link {
+   color: white;
+   text-decoration: none;
+}
+.sld-descr-link:visited {
+   color: white;
+   text-decoration: none;
+}
+.sld-descr-link:hover {
+   color: white;
+   text-decoration: none;
+}
+.sld-descr-link:active {
+   color: white;
+   text-decoration: none;
+}
