@@ -25,8 +25,20 @@ function sldPlaceListInWindow (nSlider) {
 
     let sldPrevButton = document.getElementById("sld" + nSlider + "prevbutton");
     let sldNextButton = document.getElementById("sld" + nSlider + "nextbutton");
-    if (sldsObjs[nSlider].sldStartFlag == 1) sldPrevButton.style.visibility = "hidden";  else sldPrevButton.style.visibility = "visible";
-    if (sldsObjs[nSlider].sldEndFlag == 1) sldNextButton.style.visibility = "hidden";  else sldNextButton.style.visibility = "visible";
+    if (sldsObjs[nSlider].sldStartFlag == 1) {
+        sldPrevButton.style.cursor = "not-allowed";
+        sldPrevButton.innerHTML = "-";
+    } else {
+        sldPrevButton.style.cursor = "pointer";
+        sldPrevButton.innerHTML = "&#10092;";
+    }
+    if (sldsObjs[nSlider].sldEndFlag == 1) {
+        sldNextButton.style.cursor = "not-allowed";
+        sldNextButton.innerHTML = "-";
+    } else {
+        sldNextButton.style.cursor = "pointer";
+        sldNextButton.innerHTML = "&#10093;";
+    }
 }
 
 function sldTouchStart(sldTouchEvent, nSlider) {

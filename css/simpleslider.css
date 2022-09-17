@@ -10,11 +10,12 @@
 }
 
 .sld-prev-button {
-   background: rgba(80, 80, 80, 0.5);
+   background: rgba(100, 100, 100, 0.7);
    font-family: arial;
    font-size: 20px;
    font-weight: bold;
    position: absolute;
+   border-radius: 50%;
    width: 25px;
    left: 0px;
    zindex: 2;
@@ -28,11 +29,12 @@
 }
 
 .sld-next-button {
-   background: rgba(80, 80, 80, 0.5);
+   background: rgba(100, 100, 100, 0.7);
    font-family: arial;
    font-size: 20px;
    font-weight: bold;
    position: absolute;
+   border-radius: 50%;
    width: 25px;
    right: 0px;
    zindex: 2;
