@@ -7,11 +7,14 @@
 <meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 
+<link rel="stylesheet" href="menucss/menu.css" />
+<script type="text/javascript" src="menujs/menu.js"></script>
 <link rel="stylesheet" href="css/simpleslider.css" />
 
 <style>
 
 .back-demo {
+   position: relative;
    background-color: #CCDDDD;
    margin: auto;
    border-style: solid;
@@ -19,7 +22,7 @@
    border-color: #BBCCCC;
    font-family: verdana;
    font-size: 14px;
-   padding: 5px;
+   overflow: hidden;
 }
 
 .code-show {
@@ -29,12 +32,63 @@
    font-size: 12px;
 }
 
+.example-container {
+   border: 1px solid #AAAAAA;
+   background-color: #DDEEEE;
+   padding: 10px;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
 .disclaimer {
    font-size: 10px;
 }
 
+.overview {
+   border: 1px solid #AAAAAA;
+   background-color: #DDEEEE;
+   padding: 10px;
+   margin: auto;
+}
+
+.totop {
+   background-color: #00EE00;
+   border-radius: 5px;
+   border: 1px solid #00AA00;
+   padding: 5px;
+}
+
+a.totoplink:link {
+   color: #333333;
+   text-decoration: none;
+   font-weight: bold;
+   font-family: verdana;
+}
+a.totoplink:visited {
+   color: #333333;
+   text-decoration: none;
+   font-weight: bold;
+   font-family: verdana;
+}
+a.totoplink:hover {
+   color: #333333;
+   text-decoration: none;
+   font-weight: bold;
+   font-family: verdana;
+}
+a.totoplink:active {
+   color: #333333;
+   text-decoration: none;
+   font-weight: bold;
+   font-family: verdana;
+}
+
 @media (min-width: 800px) {
    .back-demo {width: 800px;}
+}
+
+p {
+    padding: 3px;
 }
 
 </style>
@@ -130,55 +184,133 @@ var sldsObjs = [
          } 
 ];
 
+
+function fixAllTogether() {
+       adjustAllSlds();
+       fixMenu();
+}
 </script>
 
 
 </head>
 
-<body>
-<div class="back-demo">
-<h1 align="center">Welcome to SimpleSlider</h1>
+<body style="padding: 3px;">
+<div class="back-demo" id="topofall">
 
-<h3 align="center">An image slider written in plain javascript</h3>
-Slider of 120px image width:
-<div id="sld0" class="sld-cluster"> 
+<!-- Main menu   -->
+<div  style="background-color: #AABBBB; padding: 3px;">
+<div id="menu-container" class="menu-container">
+<a href="index.html"><img src="sld-img/logoslider-01.png" /></a>
+<div class="menu-hamburger" onmouseover="javascript: this.style.cursor='hand';" onclick="javascript: menuObj.setState(1);">
+
+<div class="menu-hamburger-line">
 </div>
-<p>Include <b>simpleslider.js</b>, and <b>simpleslider.css</b> </p>
-<p>
-Paste this html code at any place of your page: <br />
+<div class="menu-hamburger-line">
+</div>
+<div class="menu-hamburger-line">
+</div>
+
+</div> <!-- End of hamburger -->
+
+<div id="menu-items-container" class="menu-items-container">
+<div class="menu-close"><span class="menu-close-button" onclick="javascript: menuObj.setState(0);">&#10095;</span></div>
+<div class="menu-item"><a href="index.html" class="menu-item-link" onclick="javascript: menuObj.setState(0);">Home</a></div>
+<div class="menu-separator-line"></div>
+<div class="menu-item"><a href="https://github.com/juliansan76/simpleslider" class="menu-item-link" onclick="javascript: menuObj.setState(0);">Download</a></div>
+<div class="menu-separator-line"></div>
+<div class="menu-item"><a href="#contactsection" class="menu-item-link" onclick="javascript: menuObj.setState(0);">Contact</a></div>
+</div>
+
+</div> <!-- End of menu container -->
+</div>
+<script>
+menuObj.init();
+</script>
+
+<div align="center">
+<h2>Welcome to SimpleSlider!</h2>
+<h3>A simple and scalable image slider written in plain Javascript</h3>
+</div>
+<div class="example-container">
+<div align="center"><b>Example of 120px image width slider</b></div><br />
+    <div id="sld0" class="sld-cluster"> 
+    </div>
+    <br />
+</div>
+<br />
+<div id="mainmenuoverview" class="overview">
+<h3>Overview</h3>
+<ul>
+<li><a href="#sectioncode">HMTL slider code</a></li>
+<li><a href="#sectionsettingupdata">The data</a></li>
+<li><a href="#sectiongenerate">The scripts</a></li>
+</ul>
+</div>
+
+<h3 id="sectioncode">HTML that sets a slider in your page</h3>
+<p>Firstly, you have to include <i>simpleslider.css</i> and <i>simpleslider.js</i></p>
+<p>Paste this html code at any place of your page: </p>
 
 <p class="code-show">
-&lt;div id="sld[N]" class="sld-cluster"&gt;<br /> 
+&lt;div id="sld0" class="sld-cluster"&gt;<br /> 
 &lt;/div&gt; 
 </p>
 
-Where <b>[N]</b> is an integer that represents the index of the sliders objects array <b>sldsObjs[]</b>, which holds the following item structure:
+<p>Where sld0 is the id of the first slider. If threre's more than one,
+set their ids as sld0, sld1, sld2,.. and so on.</p>
+
+<p align="right">
+<span class="totop"><a href="#topofall" class="totoplink">Top</a></span>&nbsp;
+<span class="totop"><a href="#mainmenuoverview" class="totoplink">Overview</a></span>
+</p>
+
+<h3 id="sectionsettingupdata">The data</h3>
+<p>There's a structure of data called that you must set up to provide the scripts that generate the sliders.
+Here's an example:</p>
 <p class="code-show">
        { "sldItemWide" : 120, // width of each item in px <br />                  
           &nbsp;"sldItemPosition" : 0, //               <br />
           &nbsp;"sldItemsAllowed" : 1, // Integers for <br />               
-          &nbsp;"sldTouchStartX" : 0,  // slider control <br />
+          &nbsp;"sldTouchStartX" : 0,  // slider control scripts<br />
           &nbsp;"sldStartFlag" : 0,    //               <br />
           &nbsp;"sldEndFlag" : 0,      //               <br />
-          &nbsp;"sldContentArray" : [  //Items in each slider<br />
-                             &nbsp;&nbsp; {<br />
-                             &nbsp;&nbsp;  "imgPath" : "src of image",<br />
-                             &nbsp;&nbsp;  "imgLink" : "link",<br />
-                             &nbsp;&nbsp;  "descrText" : "Description text, may be HTML"  <br />                            
-                             &nbsp;&nbsp; }, ...<br />
-                             &nbsp;&nbsp; ] <br />
+          &nbsp;"sldContentArray" : []  //Slider elements array<br />
        }<br />
 </p>
-Each item in <b>sldsObjs[]</b> represents a slider.<br /><br />
-This structure must be set before calling the scripts that generate the sliders, usually by your server-side code.
-<br /><br />
-Once you're done with the steps above, to generate the sliders call <b>renderAllSliders()</b>. <br />
+<p>This object is an item in the array <i>sldsObjs[]</i>, and represents a slider.
+If you want to have more than one slider, just add elements to this array.</p>
+
+<p>So, we have the object that represents a slider.
+Now, we have to provide the data that this slider will show.</p>
+<p>That is, basically, filling <i>sldContentArray[]</i>. The elements of this array hold a path to an image,
+where it takes you, and a description of it</p>
+<p>Here's an example:</p>
+<p class="code-show">
+{<br />
+"imgPath" : "img/img-01.jpg",<br />
+"imgLink" : "www.somewhere.com",<br />
+"descrText" : "Description text, may be HTML"  <br />                            
+}<br />
+</p>
+
+<p align="right">
+<span class="totop"><a href="#topofall" class="totoplink">Top</a></span>&nbsp;
+<span class="totop"><a href="#mainmenuoverview" class="totoplink">Overview</a></span>
+</p>
+
+<br />
+<h3 id="sectiongenerate">The scripts</h3>
+<p>Once you're done with the steps above, to generate the sliders call <i>renderAllSliders()</i>. <br />
+This function will take every <i>div</i> tag with <i>sld[i]</i> id and make a slider from it.
 It could de linked to the <b>window.onload</b> event <br /><br /><br />
 In case windoww resizes, you can call <b>adjustAllSliders()</b> to make sliders fit in the screen in the correct way.<br />
 Again, this one should be linked to <b>window.onresize</b> event.<br /><br/>
 
 You can generate as much sliders as you want, at any place of your page.<br />
-
+</p>
+<p align="right">
+<span class="totop"><a href="#topofall" class="totoplink">Top</a></span>&nbsp;
+<span class="totop"><a href="#mainmenuoverview" class="totoplink">Overview</a></span>
 </p>
 
 <br />
@@ -186,11 +318,14 @@ Another slider of 250px image width:
 <div id="sld1" class="sld-cluster">
 </div>
 <br />
-<p>
-For any question, suggestion or bug report, mail me at <b>juliansan76@yahoo.com</b>
-</p>
+
 <br />
 <p>Enjoy! :-)</p>
+
+<hr />
+
+<p id="contactsection">Written by: Juli&aacute;n S&aacute;nchez</p>
+<p>For any suggestion, bug report or question, feel free to mail me at <a href="mailto:juliansan76@yahoo.com">juliansan76@yahoo.com</a>, or refer to <a href="https://github.com/juliansan76/simpleslider">Simpleslider repository</a></p>
 <br />
 <h3>Disclaimer</h3>
 <p class="disclaimer">
@@ -202,7 +337,7 @@ This is free software; you can redistribute it and/or modify it at your needs.  
 <script type="text/javascript" src="js/simpleslider.js"></script>
 <script type="text/javascript">
 window.onload = renderAllSliders;
-window.onresize = adjustAllSlds; 
+window.onresize = fixAllTogether; 
 </script>
 
 </body>
