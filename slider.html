@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="MobileOptimized" content="width" /> 
+<meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+
+<link rel="stylesheet" href="css/simpleslider.css" />
+
+<style>
+
+
+
+@media (min-width: 800px) {
+   .back-demo {width: 800px;}
+}
+
+p {
+    padding: 3px;
+}
+
+</style>
+
+<script type="text/javascript">
+
+// This array holds the attributes of each slider, as long as their items data
+
+var sldsObjs = [                                
+        { "sldItemWide" : 120,                  
+          "sldItemPosition" : 0,                
+          "sldItemCount" : 6,                   
+          "sldItemsAllowed" : 1,                
+          "sldTouchStartX" : 0,                 
+          "sldStartFlag" : 0,                   
+          "sldEndFlag" : 0,                     
+          "sldContentArray" : [        //The items array of this slider, you should fill this with your data
+       {
+        "imgPath" : "sld-img/img1.jpg",
+        "imgLink" : "#",
+        "descrText" : "<a class=\"sld-descr-link\" href=\"#\">Description</a>" //This can be plain text or HTML
+       },
+       {
+        "imgPath" : "sld-img/img2.jpg",
+        "imgLink" : "#",
+        "descrText" : "<a class=\"sld-descr-link\" href=\"#\">Description</a>"
+       },
+       {
+        "imgPath" : "sld-img/img3.jpg",
+        "imgLink" : "#",
+        "descrText" : "<a class=\"sld-descr-link\" href=\"#\">Description</a>"
+       },
+       {
+        "imgPath" : "sld-img/img4.jpg",
+        "imgLink" : "#",
+        "descrText" : "<a class=\"sld-descr-link\" href=\"#\">Description</a>"
+       },
+       {
+        "imgPath" : "sld-img/img5.jpg",
+        "imgLink" : "#",
+        "descrText" : "<a class=\"sld-descr-link\" href=\"#\">Description</a>"
+       },
+       {
+        "imgPath" : "sld-img/img6.jpg",
+        "imgLink" : "#",
+        "descrText" : "<a class=\"sld-descr-link\" href=\"#\">Description</a>"
+       },
+       {
+        "imgPath" : "sld-img/img7.jpg",
+        "imgLink" : "#",
+        "descrText" : "<a class=\"sld-descr-link\" href=\"#\">Description</a>"
+       },
+       {
+        "imgPath" : "sld-img/img8.jpg",
+        "imgLink" : "#",
+        "descrText" : "<a class=\"sld-descr-link\" href=\"#\">Description</a>"
+       }
+       ]    
+         },
+        { "sldItemWide" : 250,
+          "sldItemPosition" : 0,
+          "sldItemsAllowed" : 1,
+          "sldTouchStartX" : 0,
+          "sldStartFlag" : 0,
+          "sldEndFlag" : 0,
+          "sldContentArray" : [        //The items array of this slider
+       {
+        "imgPath" : "sld-img/img1.jpg",
+        "imgLink" : "#",
+        "descrText" : "<a class=\"sld-descr-link\" href=\"#\">Description</a>"
+       },
+       {
+        "imgPath" : "sld-img/img2.jpg",
+        "imgLink" : "#",
+        "descrText" : "<a class=\"sld-descr-link\" href=\"#\">Description</a>"
+       },
+       {
+        "imgPath" : "sld-img/img3.jpg",
+        "imgLink" : "#",
+        "descrText" : "<a class=\"sld-descr-link\" href=\"#\">Description</a>"
+       },
+       {
+        "imgPath" : "sld-img/img4.jpg",
+        "imgLink" : "#",
+        "descrText" : "<a class=\"sld-descr-link\" href=\"#\">Description</a>"
+       },
+       {
+        "imgPath" : "sld-img/img5.jpg",
+        "imgLink" : "#",
+        "descrText" : "<a class=\"sld-descr-link\" href=\"#\">Description</a>"
+       }
+]
+         } 
+];
+
+
+
+</script>
+
+
+</head>
+
+<body>
+<div class="back-demo">
+    <div id="sld0" class="sld-cluster"> 
+    </div>
+    <div id="sld1" class="sld-cluster"> 
+    </div>
+</div>
+<script type="text/javascript" src="js/simpleslider.js"></script>
+<script type="text/javascript">
+window.onload = renderAllSliders;
+window.onresize = adjustAllSlds; 
+</script>
+
+</body>
+
+</html>
