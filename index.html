@@ -54,8 +54,17 @@
 .totop {
    background-color: #22AA22;
    border-radius: 5px;
-   border: 1px solid #33AA33;
+   border-style: solid;
+   border-width: 1px;
+   border-color: #117711;
    padding: 5px;
+}
+
+a.sectionlink:link, a.sectionlink:visited, a.sectionlink:hover, a.sectionlink:active  {
+   color: #333333;
+   text-decoration: none;
+   font-weight: bold;
+   font-family: verdana;
 }
 
 a.totoplink:link {
@@ -241,9 +250,9 @@ menuObj.init();
 <div id="mainmenuoverview" class="overview">
 <h3>Overview</h3>
 <ul>
-<li style="padding: 5px;"><a href="#sectioncode">HMTL slider code</a></li>
-<li style="padding: 5px;"><a href="#sectionsettingupdata">The data</a></li>
-<li style="padding: 5px;"><a href="#sectiongenerate">The scripts</a></li>
+<li style="padding: 5px;"><a class="sectionlink" href="#sectioncode">HMTL slider code</a></li>
+<li style="padding: 5px;"><a class="sectionlink" href="#sectionsettingupdata">The data</a></li>
+<li style="padding: 5px;"><a class="sectionlink" href="#sectiongenerate">The scripts</a></li>
 </ul>
 </div>
 
