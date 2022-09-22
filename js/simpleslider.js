@@ -28,7 +28,7 @@ function sldPlaceListInWindow (nSlider) {
     if (sldsObjs[nSlider].sldStartFlag == 1) {
         sldPrevButton.style.cursor = "pointer";
         sldPrevButton.style.background = "rgba(100, 100, 100, 0)";
-        sldPrevButton.innerHTML = " ";
+        sldPrevButton.innerHTML = "&nbsp;";
     } else {
         sldPrevButton.style.cursor = "pointer";
         sldPrevButton.style.background = "rgba(100, 100, 100, 0.7)";
@@ -37,7 +37,7 @@ function sldPlaceListInWindow (nSlider) {
     if (sldsObjs[nSlider].sldEndFlag == 1) {
         sldNextButton.style.cursor = "pointer";
         sldNextButton.style.background = "rgba(100, 100, 100, 0)";
-        sldNextButton.innerHTML = " ";
+        sldNextButton.innerHTML = "&nbsp;";
     } else {
         sldNextButton.style.cursor = "pointer";
         sldNextButton.style.background = "rgba(100, 100, 100, 0.7)";
