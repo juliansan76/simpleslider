@@ -26,17 +26,21 @@ function sldPlaceListInWindow (nSlider) {
     let sldPrevButton = document.getElementById("sld" + nSlider + "prevbutton");
     let sldNextButton = document.getElementById("sld" + nSlider + "nextbutton");
     if (sldsObjs[nSlider].sldStartFlag == 1) {
-        sldPrevButton.style.cursor = "not-allowed";
-        sldPrevButton.innerHTML = "-";
+        sldPrevButton.style.cursor = "pointer";
+        sldPrevButton.style.background = "rgba(100, 100, 100, 0)";
+        sldPrevButton.innerHTML = " ";
     } else {
         sldPrevButton.style.cursor = "pointer";
+        sldPrevButton.style.background = "rgba(100, 100, 100, 0.7)";
         sldPrevButton.innerHTML = "&#10092;";
     }
     if (sldsObjs[nSlider].sldEndFlag == 1) {
-        sldNextButton.style.cursor = "not-allowed";
-        sldNextButton.innerHTML = "-";
+        sldNextButton.style.cursor = "pointer";
+        sldNextButton.style.background = "rgba(100, 100, 100, 0)";
+        sldNextButton.innerHTML = " ";
     } else {
         sldNextButton.style.cursor = "pointer";
+        sldNextButton.style.background = "rgba(100, 100, 100, 0.7)";
         sldNextButton.innerHTML = "&#10093;";
     }
 }
