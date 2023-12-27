@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="MobileOptimized" content="width" /> 
+<meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+
+<link rel="stylesheet" href="simpleslider-css/simpleslider.css" />
+
+<script src="simpleslider-js/simpleslider.js">
+</script>
+
+</head>
+
+<body>
+
+<div id="sld0" class="simpleslider-container">  <!-- Container of a slider -->
+
+  <div class="simpleslider-backfwd" style="margin-right: 5px;" onclick = "simpleSliders.moveSlider(0, 1);">&lt;</div>
+  <div id="simpleslider-window0" class="simpleslider-window">   <!-- slider window -->
+
+    <div id="simpleslider-moving-part0" class="simpleslider-moving-part">  <!-- slider moving part -->
+
+      <div id="simpleslider-sld0-item0" class="simpleslider-item">       <!-- slider item -->
+	<img  id="simpleslider-sld0-item-img0" src="sld-img/wall3.jpeg" class="simpleslider-item-img" />
+        <div  id="simpleslider-sld0-item-text0" class="simpleslider-item-text">
+	  Description text.
+	 
+	</div>
+      </div>                                <!-- end of slider item -->
+
+      <div id="simpleslider-sld0-item1" class="simpleslider-item">       <!-- slider item -->
+	<img  id="simpleslider-sld0-item-img1" src="sld-img/wall3.jpeg" class="simpleslider-item-img" />
+        <div  id="simpleslider-sld0-item-text1" class="simpleslider-item-text">
+	  Description text.
+	  
+	</div>
+      </div>                                <!-- end of slider item -->
+
+      <div id="simpleslider-sld0-item2" class="simpleslider-item">       <!-- slider item -->
+	<img  id="simpleslider-sld0-item-img2" src="sld-img/wall3.jpeg" class="simpleslider-item-img" />
+        <div  id="simpleslider-sld0-item-text2" class="simpleslider-item-text">
+	  Description text.
+	 
+	</div>
+      </div>                                <!-- end of slider item -->
+
+      <div id="simpleslider-sld0-item3" class="simpleslider-item">       <!-- slider item -->
+	<img  id="simpleslider-sld0-item-img3" src="sld-img/wall3.jpeg" class="simpleslider-item-img" />
+        <div  id="simpleslider-sld0-item-text3" class="simpleslider-item-text">
+	  Description text.
+	
+	</div>
+      </div>                                <!-- end of slider item -->
+
+            <div id="simpleslider-sld0-item4" class="simpleslider-item">       <!-- slider item -->
+	<img  id="simpleslider-sld0-item-img4" src="sld-img/wall3.jpeg" class="simpleslider-item-img" />
+        <div  id="simpleslider-sld0-item-text4" class="simpleslider-item-text">
+	  Description text.
+	
+	</div>
+	    </div>                                <!-- end of slider item -->
+
+      <div id="simpleslider-sld0-item5" class="simpleslider-item">       <!-- slider item -->
+	<img  id="simpleslider-sld0-item-img5" src="sld-img/wall3.jpeg" class="simpleslider-item-img" />
+        <div  id="simpleslider-sld0-item-text5" class="simpleslider-item-text">
+	  Description text.
+	
+	</div>
+      </div>                                <!-- end of slider item -->
+		  
+    </div>                             <!-- end of slider moving part -->
+    
+  </div>                              <!-- end of slider window -->
+  
+  <div class="simpleslider-backfwd" style="margin-left: 5px;" onclick="simpleSliders.moveSlider(0, -1);">&gt;</div>
+
+</div>                                          <!-- end of the slider container -->
+
+<script>
+
+simpleSliders.getSliders();
+simpleSliders.initSliders();
+  simpleSliders.setItemsDims(0, 200, 300);
+  simpleSliders.fitSliderWindow(0);
+
+  
+</script>
+
+</body>
+
+</html>
